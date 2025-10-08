@@ -23,8 +23,8 @@ RUN chmod +x /app/entrypoint.sh
 RUN apt-get update && apt-get install -y --no-install-recommends curl \
  && rm -rf /var/lib/apt/lists/*
 
-# На некоторых версиях base-образа vLLM нужна явная установка
-RUN python -m pip install --no-cache-dir --upgrade huggingface_hub
+# Обновляем huggingface_hub (через python3)
+RUN python3 -m pip install --no-cache-dir --upgrade huggingface_hub
 
 # Healthcheck на фиксированном порту 9090
 HEALTHCHECK --interval=30s --timeout=5s --retries=20 \
