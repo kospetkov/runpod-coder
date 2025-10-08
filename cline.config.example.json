@@ -1,0 +1,8 @@
+{
+  "provider": "openai",
+  "baseUrl": "http://<RUNPOD_HOST>:9090/v1",
+  "apiKey": "<VLLM_API_KEY>",
+  "model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+  "temperature": 0.2,
+  "maxTokens": 2048
+}
